@@ -1,112 +1,199 @@
-<!DOCTYPE html>
+            <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<title>By ThanhPhat</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
-
-<style>
-
-body{
-    margin:0;
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:linear-gradient(135deg,#ff9a9e,#fad0c4,#fbc2eb);
-    font-family:'Poppins', sans-serif;
-    overflow:hidden;
-}
-
-.container{
-    text-align:center;
-    z-index:2;
-}
-
-.title{
-    font-family:'Pacifico', cursive;
-    font-size:60px;
-
-    background:linear-gradient(45deg,#ff4d6d,#ff9a9e,#ff6ec7);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-
-    animation:fadeIn 2s ease;
-}
-
-.message{
-    font-size:24px;
-    margin-top:15px;
-    color:white;
-    text-shadow:0 0 10px rgba(255,255,255,0.7);
-    animation:fadeIn 3s ease;
-}
-
-@keyframes fadeIn{
-    from{
-        opacity:0;
-        transform:translateY(-30px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-.heart{
-    position:absolute;
-    color:#ff4d6d;
-    font-size:22px;
-    animation:fall linear forwards;
-}
-
-@keyframes fall{
-    from{
-        transform:translateY(-10vh);
-        opacity:1;
-    }
-    to{
-        transform:translateY(110vh);
-        opacity:0;
-    }
-}
-
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>iSynX_ | Minecraft Plugin Developer</title>
+  <meta
+    name="description"
+    content="Portfolio ca nhan cua iSynX_ - Minecraft plugin developer, server owner va owner cua LagoonVN Network."
+  />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
+  <div class="ambient ambient-a"></div>
+  <div class="ambient ambient-b"></div>
+  <div class="scanline"></div>
 
-<div class="container">
-    <div class="title">Nhân ngày Quốc Tế Phụ Nữ 8/3 🌸</div>
-    <div class="message">
-        Chúc bạn luôn vui vẻ, xinh đẹp và hạnh phúc mỗi ngày ❤️
-    </div>
-</div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="iSynX_ home">
+      <span class="brand-mark">IX</span>
+      <span>iSynX_</span>
+    </a>
 
-<script>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#role">Role</a>
+      <a href="#projects">Projects</a>
+      <a href="#donate">Donate</a>
+    </nav>
+  </header>
 
-function createHeart(){
+  <main id="top">
+    <section class="hero section-box reveal">
+      <div class="hero-copy">
+        <p class="eyebrow">Minecraft Plugin Dev / Server Owner</p>
+        <h1>iSynX_</h1>
+        <p class="hero-text">
+            Amateur Minecraft plugin developer with over 2 years of experience in Minecraft server content development, optimization, and system security.
+        </p>
 
-    const heart = document.createElement("div");
-    heart.className="heart";
-    heart.innerHTML="❤";
+        <div class="hero-actions">
+          <a class="primary-action" href="#projects">
+            <span aria-hidden="true">&gt;</span>
+            My Projects
+          </a>
+          <a class="secondary-action" href="https://discord.gg/KkyDXjRzA">
+            Discord
+          </a>
+        </div>
+      </div>
 
-    heart.style.left=Math.random()*100+"vw";
-    heart.style.animationDuration=(Math.random()*3+3)+"s";
+      <aside class="profile-card" aria-label="Profile summary">
+        <div class="avatar-shell">
+          <img src="isynx_avatar.png" alt="Avatar cua iSynX_" />
+        </div>
+        <div class="profile-data">
+          <span>Name</span>
+          <strong>iSynX_</strong>
+        </div>
+        <div class="profile-data">
+          <span>Discord</span>
+          <strong>1msynx_</strong>
+        </div>
+        <div class="profile-data">
+          <span>Gmail</span>
+          <strong>huynhthanhphat20082005@gmail.com</strong>
+        </div>
+      </aside>
+    </section>
 
-    document.body.appendChild(heart);
+    <section id="about" class="content-grid">
+      <article class="section-box reveal">
+        <p class="eyebrow">Personal Info</p>
+        <h2>Introduce</h2>
+        <p>
+          A Minecraft plugin developer and server owner focused on creating polished,
+          scalable gameplay features for custom Minecraft networks.
+        </p>
+      </article>
 
-    setTimeout(()=>{
-        heart.remove();
-    },6000);
+      <article id="role" class="section-box reveal delay-1">
+        <p class="eyebrow">Current Role</p>
+        <h2>Owner of LagoonVN Network</h2>
+        <p>
+          Leading a Minecraft network with attention to performance, player progression,
+          community systems, and long-term server identity.
+        </p>
+      </article>
+    </section>
 
-}
+    <section id="projects" class="projects-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Portfolio</p>
+        <h2>Projects</h2>
+      </div>
 
-setInterval(createHeart,300);
+      <div class="project-stats section-box reveal delay-1" aria-label="Project stats">
+        <div>
+          <span class="stat-number">03</span>
+          <span class="stat-label">Total Projects</span>
+        </div>
+        
+      </div>
 
-</script>
+      <div class="project-grid">
+        <article class="project-card reveal">
+          <span class="corner-badge free">Free</span>
+          <div class="project-media">
+            <img src="lagoonprofessionrpg.png" alt="LagoonProfessionRPG plugin icon" />
+          </div>
+          <div class="project-body">
+            <h3>LagoonProfessionRPG</h3>
+              <div class="project-status complete">
+                  <span></span>
+                  Complete
+              </div>
+            <p>Bring your server to life with an immersive profession system featuring interactive harvesting.</p>
+            <div class="project-actions">
+              <a href="https://www.spigotmc.org/resources/lagoonprofessionrpg.00000/" target="_blank" rel="noreferrer">
+                Spigot Link
+              </a>
+              <a href="https://example.com/wiki/lagoonprofessionrpg" target="_blank" rel="noreferrer">
+                Wiki
+              </a>
+            </div>
+          </div>
+        </article>
 
+        <article class="project-card reveal delay-1">
+          <span class="corner-badge premium">Premium</span>
+          <div class="project-media">
+            <img src="lagoontoken.png" alt="LagoonToken plugin icon" />
+          </div>
+          <div class="project-body">
+            <h3>LagoonToken</h3>
+              <div class="project-status processing">
+                  <span></span>
+                  Processing
+              </div>
+            <p>Create unlimited token and reward mechanics for Minecraft server economies.</p>
+            <div class="project-actions">
+              <a href="https://www.spigotmc.org/resources/lagoontoken.00000/" target="_blank" rel="noreferrer">
+                Spigot Link
+              </a>
+              <a href="https://example.com/wiki/lagoontoken" target="_blank" rel="noreferrer">
+                Wiki
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal delay-2">
+          <span class="corner-badge premium">Premium</span>
+          <div class="project-media">
+            <img src="lagooncrafting.png" alt="LagoonCrafting plugin icon" />
+          </div>
+          <div class="project-body">
+            <h3>LagoonCrafting</h3>
+            <div class="project-status processing">
+              <span></span>
+              Processing
+            </div>
+            <p>Custom GUI for MMOItems: upgrading, socketing, gem removal, gem conversion, and leveling.</p>
+            <div class="project-actions">
+              <a href="https://www.spigotmc.org/resources/lagooncrafting.00000/" target="_blank" rel="noreferrer">
+                Spigot Link
+              </a>
+              <a href="https://example.com/wiki/lagooncrafting" target="_blank" rel="noreferrer">
+                Wiki
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="donate" class="donate-section section-box reveal">
+      <div>
+        <p class="eyebrow">Support</p>
+        <h2>Donate QR</h2>
+        <p>
+          Support development, server maintenance, and upcoming LagoonVN Network features.
+        </p>
+      </div>
+
+      <div class="qr-frame">
+        <img src="QR.jpg" alt="Donate QR code" />
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>&copy; 2026 iSynX_</span>
+    <a href="mailto:huynhthanhphat20082005@gmail.com">huynhthanhphat20082005@gmail.com</a>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
